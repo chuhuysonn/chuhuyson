@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trang Chủ</title>
+    <style>
+        body{
+            padding: 0px; 
+            margin: 0px;
+        }
+        header{
+            height: 250px; background: white;
+        }
+        .logo img{
+            width: 184px;
+            height: 250px;
+            float: left;
+        }
+        img{
+            height: 250px;
+            width: 90%;
+            float: right;
+        }
+        .menu>ul>li{
+            display:inline-block;
+        }
+        .menu>ul>li>a{
+            display:block
+        }
+        .menu>ul{
+            font-size: large;
+            padding:0px;
+            margin:0px;
+            list-style:none;
+            border-radius:3px;
+            background-color:rgb(0, 195, 255);
+            text-align:center;
+        }
+        .menu>ul>li>a{
+            text-decoration:none;
+            font-variant:small-caps;
+            font-size:larger;
+            color:white;
+            padding:0 10px;
+            line-height:40px;
+        }
+        .menu>ul>li>a:hover{
+            color:yellow;
+        }
+        .menu>ul>li{
+            position:relative;
+        }
+        .menu ul ul{
+            position:absolute;
+            display:none;
+        }
+        .menu ul ul a{
+            border: 1px double rgb(185, 185, 185);
+            border-radius: 4px;
+            display:block;
+        }
+        .menu>ul>li:hover>ul{
+            display:block;
+        }
+        .menu ul ul{
+            padding:0px;
+            margin:0px;
+            list-style:none;
+            border-radius:3px;
+            width:200px;
+            background-color:white;
+            box-shadow:0 0 1px gray;
+        }
+        .menu ul ul a{
+            line-height:30px;
+            color:orangered;
+            text-decoration:none;
+            font-variant:small-caps;
+            font-size:larger;
+            padding:0 10px;
+        }
+        .menu ul ul a:hover{
+            background-color:orangered;
+            color:white;
+        }
+        .vmenu{
+            height: 500px;
+            overflow-y: auto;
+            
+        }
+        article{
+            min-height: 350px; 
+            width: 75%; 
+            background: white;
+            float: left;
+        }
+        .tintuc .tb {
+            font-size: 25px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: rgb(61, 153, 251);
+            font-weight: bold;
+            height: 35px;
+            color: white;
+        }
+        
+        .tintuc .noidung {
+            position: relative;
+            border: 1px solid gray;
+            width: 700px;
+            margin-left: 20px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        
+        .tintuc .noidung img{
+            flex-basis: 40%;
+            margin: 20px;
+            max-width: 300px;
+            max-height: 200px;
+            float: left;
+        }
+        .tintuc .noidung .text {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(+150%);
+            margin-left: 330px;
+            margin-right: 50px;
+            font-size: 22px;
+            font-weight: bold;
+
+        }
+
+        .vcl img{
+            height: 450px;
+            width: 550px;
+            float:  none;
+            box-shadow: 5px 5px 5px gray;
+        }
+        
+        aside{
+            height: 520px; 
+            width: 20%; 
+            background: rgb(170, 220, 242);
+            float: right;
+            overflow:visible;
+        }
+        
+        .vmenu{
+            padding: 0px;
+            margin: 10px;
+            list-style: none;
+            border-radius: 3px;
+            box-shadow:0 0 5px gray ;
+        }
+        .vmenu a{
+            background: url('nen.jpg') 500px ;
+            display: block;
+            border: 1px double rgb(0, 0, 0);    
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-variant: small-caps;
+            font-size: larger;
+            text-decoration: none;
+            padding: 10px 5px 15px 20px;
+        }
+        .vmenu a:hover{
+            
+            border: 2px double white;
+            border-radius: 30px;
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+        }
+        footer{
+            border-top:5px double orangered; 
+            line-height:50px;
+            background-color:lightcyan; 
+            text-align: center;
+            font-variant: small-caps;
+            clear: both;
+        }
+        nav > a{
+            color:white;
+            text-decoration:none;
+            margin:0 10px;
+        }
+        nav > a:hover{
+            color:yellow;
+            text-decoration:underline;
+        }
+        input {
+            width: 250px;
+            height: 25px;
+            font-size: 15px;
+            border-radius: 5px;
+            
+        }
+        .tt-noidung{    
+            margin-top: 10px;
+            font-size: 50px;
+        }
+        .tt-noidung li {
+            border: 1px rgb(156, 154, 154) solid;
+            width: 900px;
+            font-size: 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+        }    
+        .tt-noidung li a:hover{
+           color: red;
+        } 
+        .vide {
+            background-color: rgb(0, 145, 255);
+            color: white;
+            height:45px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <center>
+        <header><div class="logo">
+            <img src="logoah.jpg" alt=""></div>
+            <img src="anhbiaah.jpg">
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="main.html">Trang chủ</a></li>
+                <li>
+                    <a href="docthem.html">Giới thiệu</a>
+                    <ul>
+                        <li><a href="docthem.html">Thông Tin</a></li>
+                        <li><a href="docthem.html">vị trí địa lý</a></li>
+                        <li><a href="docthem.html">Cơ sở giáo dục</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="lienhe.html">Liên hệ</a>
+                    <ul>
+                        <li><a href="docthem.html">Mobile</a></li>
+                        <li><a href="docthem.html">Email</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="gopy.html">Góp ý</a>
+                    <ul>
+                        <li><a href="#">Tư vấn </a></li>
+                        <li><a href="#">Học</a></li>
+                    </ul>
+                </li>
+                <li><a href="hoidap.html">Hỏi đáp</a></li>
+                
+            </ul>
+            
+        </nav>
+            <article>
+                <br><hr>
+                <div class="vide">Giới thiệu về Trung Học Phổ Thông An Hải </div>
+                <hr><br>
+                <video width="1200" height="600" controls="0">
+                    <source src="video.mp4">
+                  </video><hr>
+                  <br>
+                  
+        
+                <div class="tintuc">
+                    <div class="tb">Tin tức - THPT An Hải </div><hr><br>
+                    <div class="tt-noidung">
+                        <ul>
+                            <li><a href="#"> Lễ Chào cờ tháng 11, chủ đề: "Ngày pháp luật Việt Nam" ...</a></li>
+                            <li><a href="#"> Hội nghị tư vấn, bồi dưỡng chuyên môn năm học 2023-2024 ...</a></li>
+                            <li><a href="#"> Hội nghị người lao động năm học 2023-2024</a></li>
+                            <li><a href="#"> Đại hội Đại biểu Đoàn TNCS HCM nhiệm kì 2023-2024 </a></li>
+                            <li><a href="#"> Tuyên truyền PCCC cho cán bộ giáo viên và các học sinh </a></li>
+                        </ul>
+                        </div>
+                <div class="noidung">
+                    <a href="docthem.html">
+                        <img src="anh3.jpg" alt="">
+                        <div class="text">Triển khai tài liệu hướng dẫn ôn thi TN THPT năm 2023-2024</div>
+                    </a>    
+                </div>
+                
+                </div>
+            </article>
+            <aside>
+               <img src="logodoan.jpg">
+               <img src="logoah.jpg">
+            
+            </aside>     
+        <footer>
+            THPT An Hải
+            Địa chỉ: Tổ 7 - Thị trấn An Dương - Huyện An Dương - Thành phố Hải Phòng
+            SĐT liên hệ: 0225 6262 517 - 097 252 1107
+        </footer>
+    </center>
+    
+</body>
+</html>
